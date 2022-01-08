@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: honeydew;
+}
+@mixin centerItems {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+header{
+    height: 30vh;
+    width: 100%;
+    @include centerItems();
+    h1{
+        font-family: sans-serif;
+    }
+}
+
+.container{
+    height: 40vh;
+    width: 50%;
+    max-width: 415px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 3px 3px 3px black;
+
+    .color{
+        height: 50%;
+        width: 50%;
+    }
+}
+
+    .blue-right{
+        float: right;
+        // background-color: rgb(58, 58, 212);
+        background-color: red;
+        border-bottom: 5px solid black;
+    }    
+    .red-left{
+        float: left;
+        // background-color: rgb(238, 77, 77);
+        background-color: red;
+        border-bottom: 5px solid black;
+    }
+    .green-left{
+        float: left;
+        float: inline-end;
+        // background-color: rgb(120, 238, 120);
+        background-color: white;
+        border-top: 5px solid black;
+    }
+    .yellow-right{
+        float: right;
+        float: inline-end;
+        // background-color: rgb(212, 212, 87);
+        background-color: white;
+        border-top: 5px solid black;
+    }
+
+ 
+.btn-start{
+    z-index: 2;
+    width: 20%;
+    max-width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 220px;
+    left: 40%;
+    background-color: rgb(253, 252, 252);
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 50%;
+    @include centerItems();
+    border: 10px solid black;
+    text-align: center;
+    p{
+        background-color: transparent;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.light{
+    opacity: 0.4;
+}
+
+.red{
+    background-image: url(../assets/charmander.jpg);
+    background-size: cover;
+}
+
+.blue{
+    background-image: url(../assets/squirtle.jpg);
+    background-size: cover;
+}
+
+.green{
+    background-image: url(../assets/bolba.jpg);
+    background-size: cover;
+}
+
+.yellow{
+    background-image: url(../assets/pikachu.jpg);
+    background-size: cover;;
+}
+
+@media (min-width: 500px){
+    .container{
+        height: 50vh;
+    }
+    .btn-start{
+        bottom:190px;
+        left: 40%;
+        height: 85px;
+    }
+}
+
+@media (min-width: 800px){
+    .container{
+        height: 60vh;
+    }
+    .btn-start{
+        bottom: 155px;
+        left: 41.5%;
+    }
+}
+
+@media (min-width: 1000px){
+    .btn-start{
+        bottom: 190px;
+        left:44%;
+        height: 90px;
+    }
+}
+
+
+
