@@ -24,6 +24,7 @@ header h1 {
 }
 
 .container {
+  position: relative;
   height: 40vh;
   width: 50%;
   max-width: 415px;
@@ -68,12 +69,15 @@ header h1 {
 
 .btn-start {
   z-index: 2;
-  width: 20%;
+  width: 40%;
   max-width: 150px;
-  height: 70px;
+  height: 30%;
   position: absolute;
-  bottom: 220px;
-  left: 40%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  margin: auto;
   background-color: #fdfcfc;
   font-family: sans-serif;
   font-size: 12px;
@@ -124,14 +128,60 @@ header h1 {
   background-size: cover;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box-inside {
+  height: 200px;
+  font-family: sans-serif;
+  text-align: center;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.level {
+  font-size: 40px;
+  color: #353030;
+}
+
+.info {
+  background-color: transparent;
+}
+
 @media (min-width: 500px) {
   .container {
     height: 50vh;
   }
   .btn-start {
-    bottom: 190px;
-    left: 40%;
-    height: 85px;
+    font-size: 16px;
   }
 }
 
@@ -140,16 +190,7 @@ header h1 {
     height: 60vh;
   }
   .btn-start {
-    bottom: 155px;
-    left: 41.5%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .btn-start {
-    bottom: 190px;
-    left: 44%;
-    height: 90px;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
