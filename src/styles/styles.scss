@@ -123,6 +123,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .box-inside{
@@ -143,8 +144,29 @@ header{
     color: #353030;
 }
 
-.info{
-    background-color: transparent;
+.intro{
+    height: 400px;
+    font-family: sans-serif;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro>h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro>ul{
+    text-align: justify;
+}
+
+li{
+    margin-bottom: 10px;
 }
 
 @media (min-width: 500px){

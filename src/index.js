@@ -34,7 +34,9 @@ class Game{
         levelBoard.classList.add('modal')
         levelBoard.innerHTML = `        <div class="box-inside">
         <h1 class="level">You are in level 1</h1>
-        <p>Pick the pokemon</p>
+        <p>Wait until the light and then...<br/><br/>
+        Pick the pokemon  
+        <p/>
     </div>`
         setTimeout(()=> {
             levelBoard.innerHTML = ''
@@ -198,6 +200,24 @@ class Game{
 }
 
 function startGame () {
-    window.game = new Game()
+    levelBoard.classList.add('modal')
+    levelBoard.innerHTML = `
+    <div class='intro'>
+    <h1>How to play</h1>
+    <ol>
+        <li>4 Pokemons will appear</li>
+        <li>One will be lightened in level one</li>
+        <li>Click or push that pokemon correctly</li>
+        <li>Levels will be scaling up and a sequence will be formed</li>
+        <li>Try to choose them in order on each level to win</li>
+        <li>The game is about ten levels of difficulty</li>
+    </ol>
+</div>
+    `
+    setTimeout(()=>{
+        levelBoard.innerHTML = ''
+        levelBoard.classList.remove('modal')
+        window.game = new Game()
+    }, 10000)
 }
 
