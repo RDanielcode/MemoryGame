@@ -80,7 +80,6 @@ class Game{
     
     sequenceGen(){
         this.sequence = new Array(LAST_LEVEL).fill(0).map(n => Math.floor(Math.random() * 4));
-        console.log(this.sequence)
     }
     
     nextLevel(){
@@ -151,18 +150,17 @@ class Game{
     chooseColor(ev){
          console.log(ev)
         const colorChosen = ev.target.dataset.color
-        console.log(colorChosen)
         const numberColor = this.transformColor(colorChosen)
         this.lightColor(colorChosen)
         if (numberColor === this.sequence[this.sublevel]){
             this.sublevel++;
             if(this.sublevel === this.level){
                 const newLevel = this.level++;
-                this.newLevelAdvanced(newLevel)
                 this.deleteClickEvent();
                 if(this.level === LAST_LEVEL + 1){
                     this.gameWon()
                 } else{
+                    this.newLevelAdvanced(newLevel)
                     setTimeout(()=>this.nextLevel(), 2000); 
                 }
             }

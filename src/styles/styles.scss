@@ -10,17 +10,19 @@
 }
 header{
     height: 30vh;
-    width: 100%;
+    width: 70%;
+    margin:auto auto 20px auto;
     @include centerItems();
-    h1{
-        font-family: sans-serif;
+    img{
+        width: 80%;
+        max-width: 330px;
     }
 }
 
 .container{
     position: relative;
-    height: 30vh;
-    width: 50%;
+    height: 43vh;
+    width: 65%;
     max-width: 415px;
     margin: 20px auto;
     border-radius: 50%;
@@ -171,7 +173,7 @@ li{
 
 @media (min-width: 500px){
     .container{
-        height: 50vh;
+        height: 65vh;
     }
     .btn-start{
         font-size: 16px;
@@ -180,7 +182,7 @@ li{
 
 @media (min-width: 800px){
     .container{
-        height: 60vh;
+        height: 65vh;
     }
     .btn-start{
         font-size: 20px;
